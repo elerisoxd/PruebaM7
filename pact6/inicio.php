@@ -14,7 +14,7 @@
         <p>Por favor, completa el siguiente formulari para continuar tu compra.</p>
     </div>
     <div class="container">
-        <form action="index.php" method="GET">
+        <form action="index.php" method="POST">
             <div class="input-group mb-3">
                 <span for="nombre" class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
                 <input name="nombre" id="nombre" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
@@ -39,7 +39,11 @@
                 <span for="correo" class="input-group-text" id="inputGroup-sizing-default">Correo electronico</span>
                 <input name="correo" id="correo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
-            <button type="GET" class="btn btn-primary">Enviar mis datos</button>
+            <div class="input-group mb-3">
+                <span for="avatar" class="input-group-text" id="inputGroup-sizing-default">URL Avatar</span>
+                <input name="avatar" id="avatar" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <button type="POST" class="btn btn-primary">Enviar mis datos</button>
         </form>
         Datos:
         - Nombre
@@ -51,6 +55,15 @@
         
     </div>
 </div>
+<?php include_once "./includes/footer.php" ?>
+
+
+
+
+
+
+
+
 
 
 

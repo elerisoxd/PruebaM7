@@ -1,13 +1,8 @@
 <?php
-$nom=$_GET['nombre'];
-$ap=$_GET['apellido'];
-$tel=$_GET['telefono'];
-$dni=$_GET['DNI'];
-$codigo=$_GET['codigoSocio'];
-$mail=$_GET['correo'];
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +12,26 @@ $mail=$_GET['correo'];
 <body>
     <?php 
     //componentes
+    include_once "includes/header.php";
+    include_once "includes/funciones.php";
+    include_once "data/productos.php";
+    include_once "data/assets/logo-mercadona.png";  
     ?>
+    
     <div class="container">
         <div>
             <h2>Productos disponibles</h2>
             <!--tabla de productos-->
+            <table class="table table-dark table-striped-columns">
+        <tr>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Disponibilidad</td>
+        </tr>
+        <?php
+            generarTablaProductos($productos);
+        ?>
+        </table>
         </div>
         <!--incluir los datos del contacto del cliente con un toast live
         boton trigger modal-->
@@ -39,7 +49,7 @@ $mail=$_GET['correo'];
                     <div class="modal-body">
                         <!--aqui va la informacion de contacto-->
                         <?php
-                            
+                            mostrarContacto();
                         ?>
 
                     </div>
@@ -49,7 +59,11 @@ $mail=$_GET['correo'];
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <!--aqui va la lista de productos-->
         </div>
+       
         <!--aqui va el footer-->
+        <?php
+            include_once "includes/footer.php";
+        ?>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
