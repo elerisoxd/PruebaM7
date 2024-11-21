@@ -14,7 +14,7 @@ $arrayPYR= [
     ],
     "medio"=>[
         "pregunta1"=>"Cual es el ser vivo que bebe agua con los pies?",
-        "respuesta1"=>"el Arbol",
+        "respuesta1"=>"El Arbol",
 
         "pregunta2"=>"Si me tienes, quieres compartirme. Si me compartes no me tienes,¿que soy?",
         "respuesta2"=>"Un secreto",

@@ -39,6 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit" class="btn btn-primary w-100">Comença el Joc</button>
         </form>
     </div>
+
+    
 </body>
 </html>
 
